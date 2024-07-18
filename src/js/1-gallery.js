@@ -87,12 +87,12 @@ function CreateGallery(arr) {
 
 newGallery.insertAdjacentHTML('beforeend', CreateGallery(images));
 
-let lightbox = new SimpleLightbox('.newGallery a', {
+let lightboxGallery = new SimpleLightbox('.gallery a', {
   captions: true,
   captionsData: 'alt',
   captionDelay: 250,
 });
 
-lightbox.on('show.simplelightbox', function (event) {
+lightboxGallery.on('show.simplelightbox', function (event) {
   event.preventDefault();
 });
